@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Siri",
+      "email": "siri123@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "email": "alex@gmail.com",
+      "password": "pass123"
+    }
+  ],
+  "wallet": [
+    {
+      "id": 1,
+      "userId": 1,
+      "balance": 5000
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "balance": 2000
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "type": "credit",
+      "amount": 500,
+      "date": "2025-09-01",
+      "description": "Top-up"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "type": "debit",
+      "amount": 200,
+      "date": "2025-09-04",
+      "description": "Purchase"
+    }
+  ],
+  "jewelry": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Necklace",
+      "type": "Necklace",
+      "price": 1200
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Ring",
+      "type": "Ring",
+      "price": 800
+    },
+    {
+      "id": null,
+      "name": "DimondRing",
+      "type": "Ring",
+      "price": 100000,
+      "userId": 1
+    },
+    {
+      "id": null,
+      "name": "Jhaala",
+      "type": "Necklace",
+      "price": 45000,
+      "userId": 1
+    }
+  ]
+}
