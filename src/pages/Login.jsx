@@ -15,7 +15,7 @@ const Login = () => {
     try {
       const result = await dispatch(login({ email, password })).unwrap();
       // success
-      navigate("/dashboard");
+      navigate("/Home");
     } catch (err) {
       // err is available in auth.error as well; but we show alert for quick feedback
       alert(err || "Login failed");
@@ -45,7 +45,7 @@ const Login = () => {
       </form>
       {auth.status === "loading" && <p>Loading...</p>}
       {auth.error && <p style={{ color: "red" }}>{auth.error}</p>}
-      <p>Don't have account? <Link to="/signup">Signup</Link></p>
+      <p className="mt-5">Don't have account? <Link to="/signup">Signup</Link></p>
     </div>
   );
 };

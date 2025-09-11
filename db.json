@@ -1,33 +1,49 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Siri",
       "email": "siri123@gmail.com",
       "password": "1234"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Alex",
       "email": "alex@gmail.com",
       "password": "pass123"
+    },
+    {
+      "id": "2c8c",
+      "name": "Akhilesh",
+      "email": "akg@gmail.com",
+      "password": "Pass1234"
     }
   ],
   "wallet": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
-      "balance": 5000
+      "balance": 19014
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 2,
-      "balance": 2000
+      "balance": 15000
+    },
+    {
+      "id": "8ec0",
+      "userId": "b7c5",
+      "balance": 0
+    },
+    {
+      "id": "9dd6",
+      "userId": "2c8c",
+      "balance": 0
     }
   ],
   "transactions": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "type": "credit",
       "amount": 500,
@@ -35,7 +51,7 @@
       "description": "Top-up"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 1,
       "type": "debit",
       "amount": 200,
@@ -45,32 +61,60 @@
   ],
   "jewelry": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "name": "Necklace",
       "type": "Necklace",
       "price": 1200
     },
     {
-      "id": 2,
-      "userId": 1,
+      "id": "2fce",
       "name": "Ring",
       "type": "Ring",
-      "price": 800
+      "price": 50000,
+      "userId": "1"
     },
     {
-      "id": null,
-      "name": "DimondRing",
-      "type": "Ring",
-      "price": 100000,
-      "userId": 1
+      "id": "5809",
+      "name": "Kada",
+      "type": "Bengals",
+      "price": 3000,
+      "userId": "1"
     },
     {
-      "id": null,
-      "name": "Jhaala",
+      "id": "2000",
+      "name": "Sitara",
       "type": "Necklace",
-      "price": 45000,
-      "userId": 1
+      "price": 8000,
+      "userId": "1"
+    },
+    {
+      "id": "4673",
+      "name": "Hira",
+      "type": "Fancy",
+      "price": 100000,
+      "userId": "2c8c"
+    },
+    {
+      "id": "b519",
+      "name": "Moti",
+      "type": "Ring",
+      "price": 200000,
+      "userId": "2c8c"
+    },
+    {
+      "id": "2ac5",
+      "name": "Manik",
+      "type": "Necklace",
+      "price": 300000,
+      "userId": "2c8c"
+    },
+    {
+      "id": "8b53",
+      "name": "Moonga",
+      "type": "Fancy",
+      "price": 50000,
+      "userId": "2c8c"
     }
   ]
 }

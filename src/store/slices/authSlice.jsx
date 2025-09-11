@@ -21,7 +21,8 @@ export const signup = createAsyncThunk(
   async ({ name, email, password }, { rejectWithValue }) => {
     try {
       const exists = await api.get(`/users?email=${encodeURIComponent(email)}`);
-      if (exists.data && exists.data.length > 0) return rejectWithValue("Email already registered");
+      if (exists.data && exists.data.length > 0) 
+        return rejectWithValue("Email already registered");
       const res = await api.post("/users", { name, email, password });
       // create wallet for user
       await api.post("/wallet", { userId: res.data.id, balance: 0 });

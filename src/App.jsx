@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Jewelry from "./pages/Jewelry";
+import Home from "./components/Home"
 import { useSelector } from "react-redux";
 
 function RequireAuth({ children }) {
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} />

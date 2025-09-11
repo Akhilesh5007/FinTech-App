@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../store/slices/authSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -20,62 +20,33 @@ const Signup = () => {
       alert(err || "Signup failed");
     }
   };
+  const formCss = {
+    border: '1px solid #3f0c85ff',
+    borderRadius: '5px',
+    padding: '10px',
+    marginLeft:'550px',
+    marginTop:'100px',
+    height:'300px',
+    width:'300px',
+};
 
   return (
 
-     <div style={{ padding: 20 }}>
-       <form onSubmit={handleSubmit}>
-         <input placeholder="Name" value={name} onChange={e=>setName(e.target.value)} required />
+     <div className="text-center" style={formCss}>
+      <h2 className="mt-3">Sign Up</h2>
+       <form className="mt-3" onSubmit={handleSubmit}>
+         <input className="m-1 " placeholder="Name" value={name} onChange={e=>setName(e.target.value)} required />
          <br />
-         <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
+         <input className="m-1 " placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
          <br />
-         <input type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} required />
+         <input className="m-1 "  type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} required />
          <br />
-         <button type="submit">Create account</button>
+         <button className=" mt-2 btn btn-outline-primary " type="submit">Create account</button>
        </form>
        {auth.status === "loading" && <p>Processing...</p>}
        {auth.error && <p style={{ color: "red" }}>{auth.error}</p>}
+        <p className="mt-3">Back To Login <Link to="/Login">Login</Link></p>
      </div>
   );
 };
-
 export default Signup;
-
-
-
-
-
-
-
-//     <>
-//     <div className="signup-form">
-//     {/* <form action="/examples/actions/confirmation.php" method="post"> */}
-//     <form onSubmit={handleSubmit}>
-// 		<h2>Register</h2>
-// 		<p className="hint-text">Create your account. It's free and only takes a minute.</p>
-//         <div className="form-group">
-// 			<div className="row">
-// 				<div className="col-xs-6"><input type="text" className="form-control" name="first_name" placeholder="First Name" required="required"/></div>
-// 				<div className="col-xs-6"><input type="text" className="form-control" name="last_name" placeholder="Last Name" required="required"/></div>
-// 			</div>        	
-//         </div>
-//         <div className="form-group">
-//         	<input type="email" className="form-control" name="email" placeholder="Email" required="required"/>
-//         </div>
-// 		<div className="form-group">
-//             <input type="password" className="form-control" name="password" placeholder="Password" required="required"/>
-//         </div>
-// 		<div className="form-group">
-//             <input type="password" className="form-control" name="confirm_password" placeholder="Confirm Password" required="required"/>
-//         </div>        
-//         <div className="form-group">
-// 			<label className="checkbox-inline"><input type="checkbox" required="required"/> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
-// 		</div>
-// 		<div className="form-group">
-//             <button type="submit" className="btn btn-success btn-lg btn-block">Register Now</button>
-//         </div>
-//     </form>
-// 	<div className="text-center">Already have an account? <a href="#">Sign in</a></div>
-// </div>
-// </>
-    

@@ -10,9 +10,20 @@ export const fetchJewelry = createAsyncThunk("jewelry/fetchJewelry", async (user
 
 export const addJewelry = createAsyncThunk("jewelry/addJewelry", async (item, { rejectWithValue }) => {
   try {
-    const res = await api.post("/jewelry", item);
+    const { id, ...itemWithoutId } = item;
+    const res = await api.post("/jewelry", itemWithoutId);
+    
     return res.data;
-  } catch (err) { return rejectWithValue(err.message || "Network error"); }
+    
+    
+    // let itemId = Math.floor(Math.random() * 100) + Math.ceil(Math.random() * 1);
+    // const withItemId = { ...item,id: itemId};
+    // const res = await api.post("/jewelry", withItemId);
+    // const withItemIdRes = { ...res.data, id: itemId };
+    // console.log('final data ', withItemIdRes)
+    // return withItemIdRes;
+  } 
+  catch (err) { return rejectWithValue(err.message || "Network error"); }
 });
 
 export const updateJewelry = createAsyncThunk("jewelry/updateJewelry", async (item, { rejectWithValue }) => {
